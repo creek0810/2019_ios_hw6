@@ -234,6 +234,7 @@ SWIFT_CLASS("_TtC12_019_ios_hw620ResultViewController")
 
 SWIFT_CLASS("_TtC12_019_ios_hw614ViewController")
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@property (nonatomic, weak) IBOutlet UIView * _Null_unspecified postcardIcon;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified warningLabel;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified useFilter;
 @property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified content;

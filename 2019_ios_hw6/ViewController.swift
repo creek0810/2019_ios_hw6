@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var postcardIcon: UIView!
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var useFilter: UISwitch!
     @IBOutlet weak var content: UITextField!
@@ -74,9 +75,46 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         filterPicker.delegate = self
         filterPicker.dataSource = self
+        
+        let result = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 55))
+        let card = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 80, height: 55), cornerRadius: 0)
+        let stamp = UIBezierPath(roundedRect: CGRect(x: 65, y: 36, width: 10, height: 13), cornerRadius: 0)
+        let bar = UIBezierPath(roundedRect: CGRect(x: 39, y: 5, width: 2, height: 42), cornerRadius: 0)
+        let content1 = UIBezierPath(roundedRect: CGRect(x: 50, y: 28, width: 27, height: 3), cornerRadius: 5)
+        let content2 = UIBezierPath(roundedRect: CGRect(x: 50, y: 20, width: 27, height: 3), cornerRadius: 5)
+        let content3 = UIBezierPath(roundedRect: CGRect(x: 50, y: 12, width: 27, height: 3), cornerRadius: 5)
+        
+        bar.append(stamp)
+        bar.append(content1)
+        bar.append(content2)
+        bar.append(content3)
+        
+        let tmp = CAShapeLayer()
+        tmp.path = bar.cgPath
+        let bodyView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 55))
+        bodyView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        bodyView.layer.mask = tmp
+        result.addSubview(bodyView)
+        
+        let tmp2 = CAShapeLayer()
+        tmp2.path = card.cgPath
+        tmp2.strokeColor = UIColor.black.cgColor
+        tmp2.fillColor = UIColor.clear.cgColor
+        let bodyView2 = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 55))
+        bodyView2.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        bodyView2.layer.mask = tmp2
+        result.addSubview(bodyView2)
+        result.transform = CGAffineTransform(scaleX: 1, y: -1)
+    
+        postcardIcon.addSubview(result)
+        
+        
+        
+        
+        
+        super.viewDidLoad()
     }
 
 }
