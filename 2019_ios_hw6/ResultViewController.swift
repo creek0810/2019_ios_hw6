@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIViewController{
     var arg = RenderArg()
     @IBOutlet weak var resultImage: UIImageView!
     
@@ -20,6 +20,13 @@ class ResultViewController: UIViewController {
         if let image = resultImage.image{
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         }
+    }
+    @IBAction func share(_ sender: Any) {
+        if let image = resultImage.image{
+            let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+        
     }
     func build() -> UIImage?{
         let resultWidth = [950, 1330]

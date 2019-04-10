@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
     
     @IBOutlet weak var postcardIcon: UIView!
     @IBOutlet weak var warningLabel: UILabel!
@@ -54,7 +54,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         photoImageView.image = selectedImage
         dismiss(animated: true, completion: nil)
     }
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! ResultViewController
@@ -109,11 +115,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         result.transform = CGAffineTransform(scaleX: 1, y: -1)
     
         postcardIcon.addSubview(result)
-        
-        
-        
-        
-        
         super.viewDidLoad()
     }
 
