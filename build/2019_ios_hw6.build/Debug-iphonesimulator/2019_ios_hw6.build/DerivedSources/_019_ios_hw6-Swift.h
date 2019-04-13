@@ -216,7 +216,7 @@ SWIFT_CLASS("_TtC12_019_ios_hw620ResultViewController")
 @interface ResultViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified resultImage;
 - (void)viewDidLoad;
-- (IBAction)savePhoto:(id _Nonnull)sender;
+- (IBAction)share:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -231,9 +231,11 @@ SWIFT_CLASS("_TtC12_019_ios_hw620ResultViewController")
 @class UIPickerView;
 @class UISlider;
 @class UIImagePickerController;
+@class UITouch;
+@class UIEvent;
 
 SWIFT_CLASS("_TtC12_019_ios_hw614ViewController")
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified postcardIcon;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified warningLabel;
 @property (nonatomic, weak) IBOutlet UISwitch * _Null_unspecified useFilter;
@@ -249,6 +251,8 @@ SWIFT_CLASS("_TtC12_019_ios_hw614ViewController")
 - (IBAction)alphaValueChanged:(id _Nonnull)sender;
 - (IBAction)pickPicture:(id _Nonnull)sender;
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;

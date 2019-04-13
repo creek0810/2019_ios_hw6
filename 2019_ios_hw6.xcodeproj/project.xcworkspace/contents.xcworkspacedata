@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:../../Assets.xcassets"
+      name = "Assets.xcassets">
+      <Group
+         location = "group:logo.imageset"
+         name = "logo.imageset">
+         <FileRef
+            location = "group:logo.png">
+         </FileRef>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:AppIcon.appiconset"
+         name = "AppIcon.appiconset">
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Contents.json">
+      </FileRef>
+      <Group
+         location = "group:backgound.imageset"
+         name = "backgound.imageset">
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+         <FileRef
+            location = "group:backgound.jpg">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
-      location = "self:2019_ios_hw6.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

@@ -16,11 +16,6 @@ class ResultViewController: UIViewController{
         super.viewDidLoad()
         resultImage.image = build()
     }
-    @IBAction func savePhoto(_ sender: Any) {
-        if let image = resultImage.image{
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        }
-    }
     @IBAction func share(_ sender: Any) {
         if let image = resultImage.image{
             let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
