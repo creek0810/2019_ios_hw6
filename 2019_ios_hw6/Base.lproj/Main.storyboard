@@ -48,7 +48,7 @@
                                 <state key="normal" title=" 製作"/>
                                 <connections>
                                     <action selector="goToResult:" destination="BIU-z2-8TK" eventType="touchUpInside" id="qJk-Ty-ddB"/>
-                                    <action selector="swichChange:" destination="BIU-z2-8TK" eventType="touchUpInside" id="ceg-wM-hPN"/>
+                                    <action selector="switchChange:" destination="BIU-z2-8TK" eventType="touchUpInside" id="ceg-wM-hPN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="內容：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXT-Yv-Uwl">
@@ -90,7 +90,7 @@
                                 <rect key="frame" x="120" y="228" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="swichChange:" destination="BIU-z2-8TK" eventType="valueChanged" id="3wZ-z9-Skk"/>
+                                    <action selector="switchChange:" destination="BIU-z2-8TK" eventType="valueChanged" id="3wZ-z9-Skk"/>
                                 </connections>
                             </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aD8-bq-8YA">

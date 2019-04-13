@@ -21,7 +21,7 @@ provides-dynamic-lookup:
 - "postcardIcon"
 - "prepare"
 - "stylePicker"
-- "swichChange"
+- "switchChange"
 - "textFieldShouldReturn"
 - "touchesBegan"
 - "useFilter"
@@ -820,7 +820,7 @@ depends-member:
 - !private ["So8NSObjectC", "sourceType"]
 - !private ["So8NSObjectC", "strokeColor"]
 - ["So8NSObjectC", "stylePicker"]
-- ["So8NSObjectC", "swichChange"]
+- ["So8NSObjectC", "switchChange"]
 - !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "textField"]
 - ["So8NSObjectC", "textFieldDidBeginEditing"]
@@ -1577,7 +1577,7 @@ depends-member:
 - !private ["So11UIResponderC", "selectedSegmentIndex"]
 - !private ["So11UIResponderC", "sourceType"]
 - ["So11UIResponderC", "stylePicker"]
-- ["So11UIResponderC", "swichChange"]
+- ["So11UIResponderC", "switchChange"]
 - !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "textField"]
 - ["So11UIResponderC", "textFieldDidBeginEditing"]
@@ -1968,7 +1968,7 @@ depends-member:
 - !private ["So16UIViewControllerC", "present"]
 - !private ["So16UIViewControllerC", "sourceType"]
 - ["So16UIViewControllerC", "stylePicker"]
-- ["So16UIViewControllerC", "swichChange"]
+- ["So16UIViewControllerC", "switchChange"]
 - ["So16UIViewControllerC", "textField"]
 - ["So16UIViewControllerC", "textFieldDidBeginEditing"]
 - ["So16UIViewControllerC", "textFieldDidEndEditing"]
@@ -2034,7 +2034,7 @@ depends-member:
 - ["12_019_ios_hw614ViewControllerC", "prepare"]
 - !private ["12_019_ios_hw614ViewControllerC", "present"]
 - ["12_019_ios_hw614ViewControllerC", "stylePicker"]
-- ["12_019_ios_hw614ViewControllerC", "swichChange"]
+- ["12_019_ios_hw614ViewControllerC", "switchChange"]
 - ["12_019_ios_hw614ViewControllerC", "textField"]
 - ["12_019_ios_hw614ViewControllerC", "textFieldDidBeginEditing"]
 - ["12_019_ios_hw614ViewControllerC", "textFieldDidEndEditing"]
@@ -2340,4 +2340,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "efdf07abc1662ded413ef1e7c3c33695"
+interface-hash: "e77bb1eb3a204d04bcba41be7b0abb95"

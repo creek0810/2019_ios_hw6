@@ -247,7 +247,7 @@ SWIFT_CLASS("_TtC12_019_ios_hw614ViewController")
 @property (nonatomic, weak) IBOutlet UISlider * _Null_unspecified alphaPicker;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified photoImageView;
 - (IBAction)goToResult:(id _Nonnull)sender;
-- (IBAction)swichChange:(id _Nonnull)sender;
+- (IBAction)switchChange:(id _Nonnull)sender;
 - (IBAction)alphaValueChanged:(id _Nonnull)sender;
 - (IBAction)pickPicture:(id _Nonnull)sender;
 - (void)imagePickerController:(UIImagePickerController * _Nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> * _Nonnull)info;

@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  2019_ios_hw6
-//
-//  Created by 王心妤 on 2019/3/27.
-//  Copyright © 2019年 river. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, UITextFieldDelegate{
@@ -21,6 +13,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     @IBOutlet weak var alphaPicker: UISlider!
     @IBOutlet weak var photoImageView: UIImageView!
     
+    // check whether user has chose photo or not
     @IBAction func goToResult(_ sender: Any) {
         if photoImageView.image == nil{
             warningLabel.text = "照片為必填欄位"
@@ -29,17 +22,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
             self.performSegue(withIdentifier: "showResult", sender: " ")
         }
     }
-    @IBAction func swichChange(_ sender: Any) {
+    // switch on => use filter
+    // switch off => not use filter
+    @IBAction func switchChange(_ sender: Any) {
         if useFilter.isOn == true{
             filterPicker.alpha = 1
         }else{
             filterPicker.alpha = 0.5
         }
     }
+    // listen for alphaPicker change event
+    // change => update label
     @IBAction func alphaValueChanged(_ sender: Any) {
         let alpha = String(format: "%.2f", alphaPicker.value)
         alphaLabel.text = alpha
     }
+    // user pick picture => update PhotoImageView
     @IBAction func pickPicture(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = .photoLibrary
@@ -54,6 +52,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         photoImageView.image = selectedImage
         dismiss(animated: true, completion: nil)
     }
+    // hadleing keyboard close event
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -68,7 +67,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         controller.arg = data
     }
     
-    // picker view config
+    // filterPicker config
     let name = ["懷舊", "黑白", "色調", "歲月", "褪色", "沖印", "單色"]
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -81,9 +80,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
     
     override func viewDidLoad() {
+        
+        // filterPicker delegate config
         filterPicker.delegate = self
         filterPicker.dataSource = self
         
+        // use UIBezierPath to draw Postcard
         let result = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 55))
         let card = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: 80, height: 55), cornerRadius: 0)
         let stamp = UIBezierPath(roundedRect: CGRect(x: 65, y: 36, width: 10, height: 13), cornerRadius: 0)
@@ -91,19 +93,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         let content1 = UIBezierPath(roundedRect: CGRect(x: 50, y: 28, width: 27, height: 3), cornerRadius: 5)
         let content2 = UIBezierPath(roundedRect: CGRect(x: 50, y: 20, width: 27, height: 3), cornerRadius: 5)
         let content3 = UIBezierPath(roundedRect: CGRect(x: 50, y: 12, width: 27, height: 3), cornerRadius: 5)
-        
         bar.append(stamp)
         bar.append(content1)
         bar.append(content2)
         bar.append(content3)
-        
         let tmp = CAShapeLayer()
         tmp.path = bar.cgPath
         let bodyView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 55))
         bodyView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         bodyView.layer.mask = tmp
         result.addSubview(bodyView)
-        
         let tmp2 = CAShapeLayer()
         tmp2.path = card.cgPath
         tmp2.strokeColor = UIColor.black.cgColor
@@ -113,10 +112,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         bodyView2.layer.mask = tmp2
         result.addSubview(bodyView2)
         result.transform = CGAffineTransform(scaleX: 1, y: -1)
-    
         postcardIcon.addSubview(result)
+        
         super.viewDidLoad()
     }
-
+    
 }
 

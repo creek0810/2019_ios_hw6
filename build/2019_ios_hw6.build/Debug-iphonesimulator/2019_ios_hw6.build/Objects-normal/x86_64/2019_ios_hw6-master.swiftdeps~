@@ -1,9 +1,9 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "ad7e743951a6203fc95f856b6d3056c2"
-build_time: [1555168708, 240583000]
+build_time: [1555174473, 55181000]
 inputs:
   "/Users/river/Desktop/2019_ios_hw6/2019_ios_hw6/RenderArg.swift": [1554905601, 0]
-  "/Users/river/Desktop/2019_ios_hw6/2019_ios_hw6/ViewController.swift": [1554905601, 0]
+  "/Users/river/Desktop/2019_ios_hw6/2019_ios_hw6/ViewController.swift": [1555171361, 0]
   "/Users/river/Desktop/2019_ios_hw6/2019_ios_hw6/LoadingViewController.swift": [1554905601, 0]
   "/Users/river/Desktop/2019_ios_hw6/2019_ios_hw6/AppDelegate.swift": [1554905601, 0]
-  "/Users/river/Desktop/2019_ios_hw6/2019_ios_hw6/ResultViewController.swift": [1554905601, 0]
+  "/Users/river/Desktop/2019_ios_hw6/2019_ios_hw6/ResultViewController.swift": [1555168900, 0]
