@@ -84,7 +84,7 @@ class ResultViewController: UIViewController{
             strVerticalize()
             labelSize = CGRect(x: 49, y: 153, width: 731, height: 1024)
         }else{
-            labelSize = CGRect(x: 153, y: 850, width: 731, height: 1024)
+            labelSize = CGRect(x: 153, y: 850, width: 1024, height: 1024)
         }
         let contentLabel = UILabel(frame: labelSize)
         contentLabel.text = arg.content
